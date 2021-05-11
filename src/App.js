@@ -1,22 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/images/logo.svg';
+import './assets/css/App.css';
+
+//importar componentes Personalizados
+import Componente from './components/Componente'
+
+
+/**function titulo2 (nombre){
+    var etiqueta = <h2>Pruevas de {nombre}</h2>; //solo una etiqueta, aunque puede tener otras dentro.
+    return etiqueta;}*/
+const titulo2 = nombre => <h2>Pruevas de {nombre}</h2>;
 
 function App() {
+  let nombre = "Mani Perez R";
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          ¡Hola mundo!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {titulo2(nombre)}
+        
+        <Componente/>  {/**pongo un componente*/}
+        <Componente/>
       </header>
     </div>
   );
